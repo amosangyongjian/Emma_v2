@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Emma_v2</string>
+
+    <string name="emma_title">EMMA</string>
+    <string name="title_activity_main">Main</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_new_request">NewRequest</string>
+
+    <string name="new_req">New Request</string>
+    <string name="title_activity_request_page">RequestPage</string>
+
+    <string name="text_welcome">Hello!</string>
+    <string name="btn_go">Confirm</string>
+    <string name="text_instruction">My name is Emma, what is yours?</string>
+    <string name="title_activity_new_user">NewUser</string>
+
+
+
+</resources>
