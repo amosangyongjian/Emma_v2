@@ -155,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
         File file = new File(path);
         if(file.exists()){
             Log.d("FEMA","File Exists");
+            Log.d("TEST","TEST");
             return true;
         }else{
             Log.d("FDEMA", "File Doesn't Exist");
