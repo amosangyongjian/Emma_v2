@@ -57,9 +57,6 @@ public class NewRequest extends AppCompatActivity {
 
         folderExists();
 
-
-
-
         requestTitle.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

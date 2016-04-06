@@ -34,7 +34,8 @@ public class RequestPage extends AppCompatActivity {
     private void initializeUI(){
 
         Button playRequest = (Button)findViewById(R.id.btn_playReq);
-
+        final Button stopRequest = (Button)findViewById(R.id.btn_stopReq);
+        stopRequest.setEnabled(false);
         Bundle data = getIntent().getExtras();
         reqName = data.getString("reqName");
         //Date reqDate = convert(data.getString("reqDate"));
@@ -51,19 +52,28 @@ public class RequestPage extends AppCompatActivity {
         playRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Log.d("PLAYRECORDING","PLAYRECORDING");
-                    m = new MediaPlayer();
-                    try{
-                        m.setDataSource(audioFile);
-                    }catch (IOException e){
-                        Log.d("IOEXCEPTION",e.toString());
-                    }
-                    try{
-                        m.prepare();
-                    }catch (IOException e){
-                        Log.d("IOEXCEPTION",e.toString());
-                    }
-                    m.start();
+                Log.d("PLAYRECORDING", "PLAYRECORDING");
+                m = new MediaPlayer();
+                try {
+                    m.setDataSource(audioFile);
+                } catch (IOException e) {
+                    Log.d("IOEXCEPTION", e.toString());
+                }
+                try {
+                    m.prepare();
+                } catch (IOException e) {
+                    Log.d("IOEXCEPTION", e.toString());
+                }
+                stopRequest.setEnabled(true);
+                m.start();
+            }
+        });
+
+        stopRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stopRequest.setEnabled(false);
+                m.stop();
             }
         });
 
