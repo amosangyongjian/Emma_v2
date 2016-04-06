@@ -21,23 +21,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/text_reqdate"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play"
-        android:id="@+id/btn_playReq"
-        android:layout_below="@+id/text_filepath"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stop"
-        android:id="@+id/btn_stopReq"
-        android:layout_below="@+id/btn_playReq"
+        android:layout_marginTop="85dp"
+        android:layout_below="@+id/text_reqtitle"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -45,8 +30,27 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/text_filepath"
-        android:layout_marginTop="88dp"
-        android:layout_below="@+id/text_reqdate"
+        android:layout_above="@+id/btn_playReq"
         android:layout_alignLeft="@+id/text_reqdate"
-        android:layout_alignStart="@+id/text_reqdate" />
+        android:layout_alignStart="@+id/text_reqdate"
+        android:layout_marginBottom="141dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/btn_playReq"
+        android:layout_above="@+id/btn_stopReq"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/btn_stopReq"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btn_playReq"
+        android:layout_alignStart="@+id/btn_playReq" />
+
 </RelativeLayout>
